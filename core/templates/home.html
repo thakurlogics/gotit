@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="fw-bold">{{ settings.tagline }}</h1>
+    <p class="lead mt-3">Delivering Measurable Business Impact</p>
+    <p>Technology should deliver results — not just features. At ThakurLogics, we focus on building solutions that improve efficiency, reduce operational costs, and enhance decision-making.</p>
+    <p>Our expertise in automation, data systems, and custom software development enables businesses to eliminate bottlenecks, increase accuracy, and scale confidently. We build with purpose, ensuring every line of code contributes to your success.</p>
+</div>
+
+<hr class="my-5">
+
+<h2 class="text-center mb-4">Our Services</h2>
+
+<div class="row">
+    {% for service in services %}
+    <div class="col-md-4 mb-4">
+        <div class="card p-4 shadow-sm">
+            <h4>{{ service.title }}</h4>
+            <p>{{ service.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
